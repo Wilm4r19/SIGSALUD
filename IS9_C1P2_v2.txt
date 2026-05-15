@@ -1,0 +1,380 @@
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+1
+
+Entrega 2 de 3: Spec-Driven Development Review
+Curso: IS9: Ingeniería de Software I
+
+1.
+
+¿Qué es esta actividad?
+Su equipo recibirá el proyecto de otro grupo y deberá responder una sola pregunta:
+
+Pregunta central de la actividad
+¿La especificación de este sistema es suficientemente clara, completa y trazable para que yo,
+sin hablar con nadie del equipo autor, pueda entender lo que hace, validar que funciona
+correctamente y continuar su desarrollo?
+
+Todo lo que se construye en esta entrega — documentos, diagramas, ADRs, reportes de IA —
+es evidencia de esa respuesta.
+Importante: No se repiten los entregables del primer corte. El equipo analista evalúa si lo que
+el equipo autor entregó realmente sirve para continuar el desarrollo.
+
+2.
+
+Hilo conductor: tres momentos encadenados
+1. ENTENDER −→ 2. CONTRASTAR −→ 3. MEJORAR
+
+Momento 1 — Entender (ingeniería inversa). A partir del código, commits, issues y documentación disponible, el equipo reconstruye qué hace el sistema, cómo está estructurado y qué
+decisiones tomó el equipo autor. No se reciben explicaciones verbales.
+Momento 2 — Contrastar. El equipo compara lo que el sistema dice que hace (especificación)
+con lo que realmente hace (implementación). Identifica brechas, ambigüedades, inconsistencias y
+deuda técnica.
+Momento 3 — Mejorar y documentar. Con base en los hallazgos, el equipo propone mejoras
+concretas a la especificación, genera nuevos diagramas y justifica decisiones técnicas mediante ADRs.
+
+3.
+
+Asignación de Proyectos
+Grupo
+Grupo 1
+Grupo 2
+Grupo 3
+Grupo 4
+Grupo 5
+
+Analiza proyecto de
+Grupo 5
+Grupo 1
+Grupo 2
+Grupo 3
+Grupo 4
+
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+4.
+
+2
+
+Regla sobre el uso de IA
+
+El uso de inteligencia artificial es obligatorio, pero no suficiente. No se evalúa el simple hecho
+de usarla. Se evalúa la capacidad del equipo para formular prompts basados en la especificación real,
+detectar errores o alucinaciones en las respuestas, y corregirlos con criterio técnico propio.
+Las herramientas permitidas incluyen: ChatGPT, Claude, Gemini, GitHub Copilot, Cursor,
+Windsurf, Codeium, y cualquier herramienta similar debidamente documentada.
+
+5.
+
+Entregables
+
+Cada grupo debe entregar únicamente los siguientes 5 entregables, todos dentro de la carpeta
+docs/ del repositorio.
+
+5.1.
+
+ENTREGABLE 1 — Documento Principal de Revisión
+
+Archivo: docs/spec-review/spec_driven_review.md
+Debe responder la pregunta central con evidencia. Contenido mínimo: propósito y tecnologías
+del sistema, arquitectura identificada, problemas encontrados, diferencias entre especificación e implementación, y recomendaciones de mejora. Extensión: entre 4 y 8 páginas.
+
+5.2.
+
+ENTREGABLE 2 — Diagramas Técnicos
+
+Carpeta: docs/diagrams/
+Cuatro diagramas obligatorios, construidos a partir del código real:
+1. Diagrama de componentes.
+2. Diagrama BPMN o de actividades (flujo principal del sistema).
+3. Diagrama de estados (de una entidad crítica: pedido, usuario, solicitud, etc.).
+4. Diagrama de clases, entidades o modelo de datos.
+Se pueden usar Draw.io, Lucidchart, Mermaid, PlantUML, StarUML u otra herramienta similar.
+
+5.3.
+
+ENTREGABLE 3 — Comparación Spec vs Implementación
+
+Archivo: docs/spec-review/spec_vs_implementation.md
+Debe identificar mínimo 5 diferencias respondiendo: ¿qué coincide?, ¿qué no coincide?, ¿qué
+funcionalidades faltan?, ¿qué está mal documentado?, ¿qué fue difícil de entender?
+Incluir la siguiente tabla comparativa:
+Elemento
+Arquitectura
+Base de datos
+
+Especificación esperada
+
+Implementación
+real
+
+Gap identificado
+
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+3
+
+Frontend
+Backend
+Autenticación
+API
+
+Incluir también una tabla de deuda técnica:
+Problema
+
+5.4.
+
+Descripción
+
+Impacto
+
+Severidad
+Alta / Media /
+Baja
+
+ENTREGABLE 4 — Reporte de IA
+
+Carpeta: docs/prompts/
+Tres archivos obligatorios:
+master_spec_prompt.md — el prompt principal usado para analizar el sistema.
+prompt_iterations.md — mínimo 5 prompts distintos con su propósito.
+ai_validation_report.md — mínimo 3 errores detectados en respuestas de IA, cómo se
+identificaron y cómo el equipo los corrigió.
+Prompt usado
+
+5.5.
+
+Resultado IA
+
+Error encontrado
+
+Corrección humana
+
+ENTREGABLE 5 — Pull Request y Sustentación
+
+El equipo debe crear una rama (spec-review-g1, spec-review-g2, etc.), subir todos los archivos
+anteriores y abrir un Pull Request hacia la rama principal.
+La sustentación técnica tiene una duración máxima de 15 minutos y debe cubrir: arquitectura
+identificada, diagramas, brechas encontradas, uso crítico de IA y recomendaciones finales.
+
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+6.
+
+Estructura de Carpetas del Repositorio
+
+docs/
+spec-review/
+spec_driven_review.md
+spec_vs_implementation.md
+diagrams/
+component_diagram.png
+class_or_entity_diagram.png
+activity_or_bpmn_diagram.png
+state_diagram.png
+adr/
+ADR-001-spec-driven-development.md
+ADR-002-architecture-gaps.md
+ADR-003-ai-assisted-review.md
+prompts/
+master_spec_prompt.md
+prompt_iterations.md
+ai_validation_report.md
+presentation/
+spec_driven_review_slides.pdf
+
+7.
+
+Checklist Antes de Entregar
+Se clonó el repositorio y se creó una rama de trabajo.
+Se analizó la especificación y el código fuente.
+Se ejecutó el sistema (o se documentó por qué no fue posible).
+Se elaboró el documento principal de revisión.
+Se generaron los 4 diagramas técnicos.
+Se comparó especificación e implementación con mínimo 5 diferencias.
+Se identificó y documentó deuda técnica.
+Se documentaron los prompts y se validaron los resultados de IA.
+Se crearon mínimo 3 ADRs.
+Se creó el Pull Request.
+Se preparó la sustentación.
+
+4
+
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+8.
+
+5
+
+Rúbrica de Evaluación
+
+Criterio
+
+Excelente
+
+Bueno
+
+Aceptable
+
+Peso
+
+Comprensión del sistema
+
+Comprende claramente
+propósito, estructura y
+funcionamiento.
+Evalúa claridad, completitud, trazabilidad y
+verificabilidad con rigor.
+Reconstruye arquitectura, componentes, datos y flujos con evidencia real.
+Identifica brechas, inconsistencias y riesgos
+con claridad.
+Claros, legibles y derivados del sistema real.
+Detecta deuda técnica
+relevante, analiza impacto y severidad.
+Documenta prompts,
+errores y validación
+humana rigurosamente.
+Decisiones bien justificadas con alternativas y
+consecuencias.
+Rama, commits, estructura y Pull Request correctos.
+Clara, profesional y basada en evidencia.
+
+Comprende el sistema
+con pequeñas imprecisiones.
+Evalúa con algunos vacíos.
+
+Comprensión parcial o
+superficial.
+
+0.6
+
+Análisis superficial.
+
+0.8
+
+Reconstruye elementos
+principales con omisiones.
+
+Modelos incompletos o
+desconectados del código.
+
+0.8
+
+Identifica algunas diferencias relevantes.
+
+Comparación superficial o incompleta.
+
+0.7
+
+Adecuados con errores
+menores.
+Detecta problemas con
+análisis limitado.
+
+Poco claros o desconectados del sistema.
+Lista problemas sin suficiente justificación.
+
+0.5
+
+Documenta el uso con
+algunas limitaciones.
+
+Poco trazable o sin validación clara.
+
+0.6
+
+ADRs adecuados pero
+poco profundos.
+
+ADRs incompletos o
+genéricos.
+
+0.4
+
+Uso funcional con errores menores.
+
+Uso incompleto o desordenado.
+
+0.2
+
+Comprensible con algunos vacíos.
+
+Confusa o poco técnica.
+
+0.2
+
+Calidad del análisis
+de especificación
+
+Ingeniería inversa
+
+Spec vs Implementation
+Diagramas técnicos
+Technical Debt Review
+Uso crítico de IA
+
+ADRs
+
+Uso de GitHub
+
+Sustentación técnica
+Total
+
+0.6
+
+6.0
+
+Escuela Tecnológica Instituto Técnico Central
+IS9: Ingeniería de Software I — Parcial 2
+Profesor: Sebastián Yepes
+
+A.
+
+Anexo A: Plantilla de ADR
+
+# ADR-XXX: Título de la decisión
+## Estado
+Propuesto / Aceptado / Rechazado
+## Contexto
+Descripción del problema o situación técnica.
+## Decisión
+Decisión tomada, inferida o propuesta.
+## Alternativas consideradas
+- Alternativa 1
+- Alternativa 2
+## Consecuencias
+Impactos positivos y negativos de la decisión.
+## Riesgos
+Riesgos técnicos asociados.
+
+B.
+
+Anexo B: Prompt Maestro Sugerido
+
+Actúa como arquitecto senior de software y revisor técnico.
+Analiza este repositorio con un enfoque de Spec-Driven Development.
+Compara la especificación disponible con la implementación real.
+Identifica:
+- propósito del sistema y calidad de la especificación,
+- arquitectura inferida y componentes principales,
+- modelo de datos y flujos principales,
+- brechas entre especificación e implementación,
+- deuda técnica y riesgos arquitectónicos,
+- recomendaciones de mejora.
+No inventes información. Si algo no está claro, indícalo.
+Toda conclusión debe basarse en evidencia del código,
+documentación, issues, commits o estructura del repositorio.
+
+6
+
+
